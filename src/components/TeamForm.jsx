@@ -30,12 +30,10 @@ class TeamForm extends React.Component {
             onChange={this.onChange.bind(this, 'forward')}
           />
         </p>
-        <p>
-          <ScoreCounter
-            value={team.score}
-            onChange={this.onChange.bind(this, 'score')}
-          />
-        </p>
+        <ScoreCounter
+          value={team.score}
+          onChange={this.onChange.bind(this, 'score')}
+        />
       </div>
     );
   }

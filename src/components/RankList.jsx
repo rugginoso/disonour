@@ -10,8 +10,10 @@ function RankList(props) {
   return (
     <table>
       <thead>
-        <td>Name</td>
-        <td>Disonours</td>
+        <tr>
+          <th>Name</th>
+          <th>Disonours</th>
+        </tr>
       </thead>
       <tbody>
         {limitedItems.map((item, key) => <RankListItem key={key} item={item} />)}
