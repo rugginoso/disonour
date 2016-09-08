@@ -1,4 +1,4 @@
-import React, {PropTypes} from 'react';
+import React, { PropTypes } from 'react';
 
 class ScoreCounter extends React.Component {
   onClick(amount, e) {
@@ -7,8 +7,8 @@ class ScoreCounter extends React.Component {
 
     onChange({
       target: {
-        value: value + amount
-      }
+        value: value + amount,
+      },
     });
   }
 
@@ -17,24 +17,23 @@ class ScoreCounter extends React.Component {
 
     onChange({
       target: {
-        value: parseInt(e.target.value, 10)
-      }
+        value: parseInt(e.target.value, 10),
+      },
     });
-
   }
 
   render() {
-    const { value, onChange } = this.props;
+    const { value } = this.props;
 
     return (
       <div>
-        <a href="" onClick={ this.onClick.bind(this, -1) }>-</a>
+        <a href="" onClick={this.onClick.bind(this, -1)}>-</a>
         <input
           type="number"
           value={value}
-          onChange={ this.onChange.bind(this) }
+          onChange={this.onChange.bind(this)}
         />
-        <a href="" onClick={ this.onClick.bind(this, 1) }>+</a>
+        <a href="" onClick={this.onClick.bind(this, 1)}>+</a>
       </div>
     );
   }
@@ -42,7 +41,7 @@ class ScoreCounter extends React.Component {
 
 ScoreCounter.propTypes = {
   value: PropTypes.number.isRequired,
-  onChange: PropTypes.func.isRequired
+  onChange: PropTypes.func.isRequired,
 };
 
 export default ScoreCounter;

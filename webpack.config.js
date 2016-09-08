@@ -7,6 +7,13 @@ var APP_DIR = path.resolve(__dirname, 'src');
 var config = {
   entry: [APP_DIR + '/index.jsx'],
   module: {
+    preLoaders: [
+      {
+          test: /\.jsx?$/,
+          include: APP_DIR,
+          loader: 'eslint-loader'      
+      }
+    ],
     loaders: [
       {
         test: /\.jsx?$/,
@@ -17,6 +24,9 @@ var config = {
         }
       }
     ]
+  },
+  eslint: {
+    configFile: '.eslintrc'
   },
   output: {
     path: BUILD_DIR,

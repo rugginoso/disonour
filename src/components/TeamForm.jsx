@@ -1,4 +1,4 @@
-import React, {PropTypes} from 'react';
+import React, { PropTypes } from 'react';
 
 import ScoreCounter from './ScoreCounter.jsx';
 
@@ -19,7 +19,7 @@ class TeamForm extends React.Component {
             type="text"
             value={team.keeper}
             placeholder="Keeper name"
-            onChange={ this.onChange.bind(this, 'keeper') }
+            onChange={this.onChange.bind(this, 'keeper')}
           />
         </p>
         <p>
@@ -27,13 +27,13 @@ class TeamForm extends React.Component {
             type="text"
             value={team.forward}
             placeholder="Forward name"
-            onChange={ this.onChange.bind(this, 'forward') }
+            onChange={this.onChange.bind(this, 'forward')}
           />
         </p>
         <p>
           <ScoreCounter
             value={team.score}
-            onChange={ this.onChange.bind(this, 'score') }
+            onChange={this.onChange.bind(this, 'score')}
           />
         </p>
       </div>
@@ -44,7 +44,7 @@ class TeamForm extends React.Component {
 TeamForm.propTypes = {
   id: PropTypes.number.isRequired,
   team: PropTypes.object.isRequired,
-  onChange: PropTypes.func.isRequired
+  onChange: PropTypes.func.isRequired,
 };
 
 export default TeamForm;

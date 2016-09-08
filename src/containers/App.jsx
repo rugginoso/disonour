@@ -12,19 +12,19 @@ class App extends React.Component {
         {
           keeper: '',
           forward: '',
-          score: 0
+          score: 0,
         },
         {
           keeper: '',
           forward: '',
-          score: 0
+          score: 0,
         },
       ],
       topDisonoured: [
         { name: 'Rugginoso', disonours: 10 },
         { name: 'Duplo', disonours: 7 },
-        { name: 'Gianni', disonours: 4 }
-      ]
+        { name: 'Gianni', disonours: 4 },
+      ],
     };
   }
 
@@ -47,8 +47,8 @@ class App extends React.Component {
       <div>
         <MatchForm
           teams={teams}
-          onChange={ this.onMatchFormChange.bind(this) }
-          onSubmit={ this.onMatchFormSubmitted.bind(this) }
+          onChange={this.onMatchFormChange.bind(this)}
+          onSubmit={this.onMatchFormSubmitted.bind(this)}
         />
         <RankList items={topDisonoured} limit={10} />
       </div>
