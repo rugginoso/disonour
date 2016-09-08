@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
 import MatchForm from '../components/MatchForm.jsx';
@@ -47,12 +48,9 @@ function mapStateToProps(state) {
 }
 
 function mapDispatchToProps(dispatch) {
-  return {
-    onChangeTeamField: (team, role, name) => {
-      const action = actions.changeTeamField(team, role, name);
-      dispatch(action);
-    },
-  };
+  return bindActionCreators({
+    onChangeTeamField: actions.changeTeamField,
+  }, dispatch);
 }
 
 export default connect(
